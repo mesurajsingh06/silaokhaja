@@ -57,20 +57,23 @@
       z-index: 0;
     }
 
-    /* PREMIUM MOBILE-FIRST NAVIGATION */
+    /* ── MOBILE-FIRST RESPONSIVE NAVIGATION HEADER ── */
     nav {
       position: sticky; top: 0; z-index: 200;
       background: rgba(255,251,242,0.96);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--gold-border);
-      padding: 0 1rem;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 70px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      text-align: center;
     }
 
     .nav-logo {
       font-family: 'Marcellus', serif;
-      font-size: 20px;
+      font-size: 22px;
       color: var(--brown); text-decoration: none;
       letter-spacing: 0.05em;
       text-transform: uppercase;
@@ -78,17 +81,47 @@
     }
     .nav-logo span { color: var(--gold); }
 
-    .nav-links { display: flex; align-items: center; gap: 12px; }
-    .nav-link { color: var(--text-mid); text-decoration: none; font-size: 13px; font-family: 'Marcellus', serif; letter-spacing: 0.05em; cursor: pointer; }
+    .nav-links { 
+      display: flex; 
+      align-items: center; 
+      justify-content: center;
+      gap: 20px; 
+      width: 100%;
+    }
+    .nav-link { 
+      color: var(--text-mid); 
+      text-decoration: none; 
+      font-size: 13px; 
+      font-family: 'Marcellus', serif; 
+      letter-spacing: 0.05em; 
+      cursor: pointer;
+      padding: 4px 0;
+    }
     .nav-link.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
 
     .nav-wa {
-      display: flex; align-items: center; gap: 6px;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
       background: #25D366; color: #fff;
       border: none; border-radius: 6px;
-      padding: 8px 12px; font-size: 12px; font-weight: 600;
+      padding: 10px 16px; font-size: 12px; font-weight: 600;
       cursor: pointer; text-decoration: none; font-family: 'Marcellus', serif;
       letter-spacing: 0.05em;
+      width: 100%;
+    }
+
+    /* DESKTOP MEDIA UPGRADE FOR HEADER */
+    @media (min-width: 768px) {
+      nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2rem;
+        height: 75px;
+        gap: 0;
+      }
+      .nav-logo { font-size: 24px; }
+      .nav-links { width: auto; gap: 32px; }
+      .nav-link { font-size: 14px; }
+      .nav-wa { width: auto; padding: 10px 20px; font-size: 13px; }
     }
 
     /* GLOBAL APP LAYOUT CONTAINERS */
@@ -135,12 +168,12 @@
     .pdp-wrapper { background: #fff; border: 1px solid var(--gold-border); border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 6px 20px var(--shadow); }
     .pdp-header-row { display: flex; align-items: center; gap: 16px; margin-bottom: 1rem; border-bottom: 1px solid var(--gold-border); padding-bottom: 1rem; }
     .pdp-large-emoji { font-size: 54px; }
-    .pdp-meta-title h2 { font-family: 'Marcellus', serif; font-size: 28px; color: var(--brown); text-transform: uppercase; }
-    .pdp-meta-title .price-tag { font-size: 18px; color: var(--gold-deep); font-weight: 600; }
-    .pdp-body h4 { font-family: 'Marcellus', serif; font-size: 16px; color: var(--brown); margin: 1.5rem 0 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
-    .pdp-body p { font-size: 15.5px; color: var(--text-mid); margin-bottom: 1.25rem; }
+    .pdp-meta-title h2 { font-family: 'Marcellus', serif; font-size: 24px; color: var(--brown); text-transform: uppercase; }
+    .pdp-meta-title .price-tag { font-size: 16px; color: var(--gold-deep); font-weight: 600; }
+    .pdp-body h4 { font-family: 'Marcellus', serif; font-size: 15px; color: var(--brown); margin: 1.5rem 0 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .pdp-body p { font-size: 15px; color: var(--text-mid); margin-bottom: 1.25rem; }
 
-    .btn-pdp-whatsapp { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; background: #25D366; color: #fff; border: none; border-radius: 12px; padding: 18px; font-size: 16px; font-weight: 600; font-family: 'Marcellus', serif; letter-spacing: 0.05em; cursor: pointer; margin-top: 2rem; box-shadow: 0 4px 16px rgba(37,211,102,0.2); }
+    .btn-pdp-whatsapp { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; background: #25D366; color: #fff; border: none; border-radius: 12px; padding: 18px; font-size: 15px; font-weight: 600; font-family: 'Marcellus', serif; letter-spacing: 0.05em; cursor: pointer; margin-top: 2rem; box-shadow: 0 4px 16px rgba(37,211,102,0.2); }
     .btn-pdp-whatsapp:hover { background: #1aad54; transform: translateY(-1px); }
 
     /* KNOWLEDGE HUB ARCHITECTURE */
@@ -151,7 +184,7 @@
     .blog-display-card { background: #fff; border: 1px solid var(--gold-border); border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 12px var(--shadow); }
     .blog-pane { display: none; }
     .blog-pane.active { display: block; }
-    .pane-title { font-family: 'Marcellus', serif; font-size: 24px; color: var(--brown); margin-bottom: 1.25rem; text-transform: uppercase; }
+    .pane-title { font-family: 'Marcellus', serif; font-size: 22px; color: var(--brown); margin-bottom: 1.25rem; text-transform: uppercase; }
 
     .divider { border: none; border-top: 1px solid var(--gold-border); max-width: 850px; margin: 2rem auto; }
     .trust-strip { background: var(--cream-2); border-top: 1px solid var(--gold-border); border-bottom: 1px solid var(--gold-border); padding: 1.5rem 1rem; }
@@ -162,21 +195,22 @@
     footer .f-logo span { color: var(--gold); }
 
     @media (min-width: 768px) {
-      nav { padding: 0 2rem; }
-      .nav-logo { font-size: 24px; }
-      .nav-links { gap: 24px; }
-      .nav-link { font-size: 14px; }
       .hero { padding: 5.5rem 2rem 4.5rem; }
       .section { padding: 4rem 2rem; }
       .blog-sidebar-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; }
       .blog-nav-strip { flex-direction: column; overflow-x: visible; }
       .blog-nav-chip { white-space: normal; }
+      .pdp-meta-title h2 { font-size: 28px; }
+      .pdp-meta-title .price-tag { font-size: 18px; }
+      .pdp-body h4 { font-size: 16px; }
+      .pdp-body p { font-size: 15.5px; }
+      .pane-title { font-size: 24px; }
     }
   </style>
 </head>
 <body>
 
-<!-- CORE PLATFORM NAVIGATION -->
+<!-- UPDATED RESPONSIVE NAVIGATION -->
 <nav>
   <a onclick="navigateTo('home')" class="nav-logo">Silao<span>Khaja</span></a>
   <div class="nav-links">
@@ -187,7 +221,7 @@
   <a href="#" class="nav-wa" onclick="openGeneralWhatsApp(event)">WhatsApp Support</a>
 </nav>
 
-<!-- VIEW 1: HOME VARIANT CATALOG -->
+<!-- VIEW 1: HOME CATALOG -->
 <div id="view-home" class="view-section active">
   <header class="hero">
     <div class="hero-inner">
@@ -237,7 +271,7 @@
   </main>
 </div>
 
-<!-- VIEW 2: DYNAMIC PRODUCT PAGE (PDP ARCHITECTURE) -->
+<!-- VIEW 2: PRODUCT DETAIL VIEW (PDP) -->
 <div id="view-pdp" class="view-section">
   <main class="section">
     <a onclick="navigateTo('home')" style="cursor:pointer; font-size:13px; font-family:'Marcellus',serif; color:var(--gold-deep); display:inline-block; margin-bottom:1.5rem;">← Return to Collection</a>
@@ -269,7 +303,7 @@
   </main>
 </div>
 
-<!-- VIEW 3: ABOUT / HISTORICAL STORY PAGE -->
+<!-- VIEW 3: ABOUT / HERITAGE -->
 <div id="view-about" class="view-section">
   <main class="section">
     <span class="sec-label">The Source</span>
@@ -281,7 +315,7 @@
   </main>
 </div>
 
-<!-- VIEW 4: DEEP SEO BLOG CHROMIUM PAGE -->
+<!-- VIEW 4: CHRONICLES BLOG -->
 <div id="view-blog" class="view-section">
   <main class="section">
     <span class="sec-label">The Library</span>
@@ -333,7 +367,6 @@
 <script>
   const WHATSAPP_NUMBER = '917764060959';
 
-  // STRUCTURED PRODUCT DATA MODEL
   const catalog = [
     {
       name: "Desi Ghee Khaja (Premium Batch)",
@@ -346,7 +379,7 @@
       name: "Gur Khaja (Traditional Jaggery Batch)",
       price: "₹1,100 – ₹1,299 / kg",
       emoji: "🍯",
-      desc: "An ancient execution pattern favored by purists. We entirely bypass modern white sugars, choosing instead to coat our fragile 52 sheets in rich, unrefined dark country jaggery. This creates a deeply layered, smoky molasses profile and an exquisite dark finish that honors deep traditional flavors beautifully.",
+      desc: "An ancient taste, the **Gur Khaja**. Instead of sugar, we sweeten these flaky layers with raw, unrefined country jaggery. It gives an earthy flavor and a rich, dark hue. Loved by heritage purists.",
       ingredients: "Heirloom local wheat flours, pure vegetable shortening frying lines, organic mineral-rich country sugarcane jaggery (Gur reductions), natural alkaline well water spikes."
     },
     {
@@ -367,7 +400,6 @@
 
   let currentActiveProductId = 0;
 
-  // ROUTING ENGINE
   function navigateTo(viewId) {
     document.querySelectorAll('.view-section').forEach(section => section.classList.remove('active'));
     document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
@@ -400,7 +432,6 @@
     document.getElementById(`pane-${idx}`).classList.add('active');
   }
 
-  // CHECKOUT ENGINE (WHATSAPP CALLOUT CONTEXTS)
   function openGeneralWhatsApp(e) {
     e.preventDefault();
     const txt = encodeURIComponent("Namaste! 🙏\n\nI am exploring your traditional Nalanda repository platform and would love to consult with a support representative regarding bulk gift curations and shipping schedules. Thank you.");
