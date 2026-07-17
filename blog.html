@@ -21,43 +21,60 @@
       --text: #2A1A0A; --text-mid: #5C3A1A; --text-muted: #8C6440; --shadow: rgba(80,40,0,0.08);
     }
     body { font-family: 'Lora', serif; background: var(--cream); color: var(--text); font-size: 16px; line-height: 1.8; }
-    nav { position: sticky; top: 0; z-index: 200; background: rgba(255,251,242,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gold-border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 70px; }
-    .nav-logo { font-family: 'Marcellus', serif; font-size: 24px; color: var(--brown); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; }
+    
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(255,251,242,0.96); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gold-border); padding: 0 1rem;
+      display: flex; align-items: center; justify-content: space-between; height: 70px;
+    }
+    .nav-logo { font-family: 'Marcellus', serif; font-size: 20px; color: var(--brown); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; }
     .nav-logo span { color: var(--gold); }
-    .nav-links { display: flex; align-items: center; gap: 20px; }
-    .nav-link { color: var(--text-mid); text-decoration: none; font-size: 14px; font-family: 'Marcellus', serif; letter-spacing: 0.05em; }
+    .nav-links { display: flex; align-items: center; gap: 12px; }
+    .nav-link { color: var(--text-mid); text-decoration: none; font-size: 13px; font-family: 'Marcellus', serif; letter-spacing: 0.05em; }
     
-    .blog-header { text-align: center; padding: 5rem 2rem; background: linear-gradient(160deg, #FEF0CC 0%, #FFFBF2 100%); border-bottom: 1px solid var(--gold-border); }
-    .blog-header h1 { font-family: 'Marcellus', serif; font-size: 36px; color: var(--brown); text-transform: uppercase; letter-spacing: 0.05em; }
-    .blog-header p { font-style: italic; color: var(--text-muted); margin-top: 0.5rem; font-size: 18px; }
+    .blog-header { text-align: center; padding: 3.5rem 1rem 2.5rem; background: linear-gradient(160deg, #FEF0CC 0%, #FFFBF2 100%); border-bottom: 1px solid var(--gold-border); }
+    .blog-header h1 { font-family: 'Marcellus', serif; font-size: 28px; color: var(--brown); text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.3; }
+    .blog-header p { font-style: italic; color: var(--text-muted); margin-top: 0.5rem; font-size: 15px; }
     
-    .main-layout { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 300px 1fr; gap: 40px; }
-    .sidebar { position: sticky; top: 110px; height: max-content; }
-    .sidebar h2 { font-family: 'Marcellus', serif; font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 1.25rem; }
-    .blog-links-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .blog-nav-item { display: block; background: #fff; padding: 14px 18px; border: 1px solid var(--gold-border); border-radius: 6px; text-decoration: none; color: var(--text-mid); font-size: 14.5px; transition: all 0.3s ease; }
+    /* PURE MOBILE-FIRST FLEX LAYOUT FOR THE ENTRY BLOCK */
+    .main-layout { max-width: 1100px; margin: 0 auto; padding: 2rem 1rem; display: flex; flex-direction: column; gap: 24px; }
+    
+    .sidebar { width: 100%; }
+    .sidebar h2 { font-family: 'Marcellus', serif; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.75rem; }
+    
+    /* Horizontal scrollable button strip on phones, normal sidebar on tablets/desktop */
+    .blog-links-list { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
+    .blog-nav-item { display: block; background: #fff; padding: 10px 16px; border: 1px solid var(--gold-border); border-radius: 6px; text-decoration: none; color: var(--text-mid); font-size: 13.5px; white-space: nowrap; transition: all 0.2s ease; }
     .blog-nav-item.active, .blog-nav-item:hover { background: var(--brown); color: #fff; border-color: var(--brown); }
     
-    .content-area { background: #fff; border: 1px solid var(--gold-border); border-radius: 16px; padding: 3.5rem; box-shadow: 0 6px 20px var(--shadow); }
+    .content-area { background: #fff; border: 1px solid var(--gold-border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px var(--shadow); }
     .blog-post { display: none; }
     .blog-post.active { display: block; }
     
-    .post-meta { font-family: 'Marcellus', serif; font-size: 12px; color: var(--gold-deep); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
-    .post-title { font-family: 'Marcellus', serif; font-size: 30px; color: var(--brown); line-height: 1.3; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.02em; }
-    .post-body h3 { font-family: 'Marcellus', serif; font-size: 20px; color: var(--brown); margin: 2rem 0 0.75rem; text-transform: uppercase; letter-spacing: 0.03em; }
-    .post-body p { font-size: 16px; color: var(--text-mid); margin-bottom: 1.5rem; }
-    .post-body ul { margin: 0 0 1.5rem 1.5rem; color: var(--text-mid); }
-    .post-body ul li { margin-bottom: 8px; }
+    .post-meta { font-family: 'Marcellus', serif; font-size: 11px; color: var(--gold-deep); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .post-title { font-family: 'Marcellus', serif; font-size: 24px; color: var(--brown); line-height: 1.3; margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.02em; }
+    .post-body h3 { font-family: 'Marcellus', serif; font-size: 18px; color: var(--brown); margin: 1.5rem 0 0.5rem; text-transform: uppercase; letter-spacing: 0.03em; }
+    .post-body p { font-size: 15px; color: var(--text-mid); margin-bottom: 1.25rem; }
+    .post-body ul { margin: 0 0 1.25rem 1.25rem; color: var(--text-mid); }
+    .post-body ul li { margin-bottom: 6px; }
     .post-body strong { color: var(--brown); font-weight: 600; }
     
-    footer { text-align: center; padding: 3rem 2rem; font-size: 13px; color: var(--text-muted); background: var(--cream-2); border-top: 1px solid var(--gold-border); }
+    footer { text-align: center; padding: 2.5rem 2rem; font-size: 12px; color: var(--text-muted); background: var(--cream-2); border-top: 1px solid var(--gold-border); }
     
-    @media (max-width: 800px) {
-      .main-layout { grid-template-columns: 1fr; padding: 2rem 1rem; }
-      .sidebar { position: static; }
-      .blog-links-list { flex-direction: row; overflow-x: auto; padding-bottom: 8px; gap: 8px; }
-      .blog-nav-item { white-space: nowrap; padding: 10px 16px; }
-      .content-area { padding: 2rem 1.5rem; }
+    /* DESKTOP UPGRADES */
+    @media (min-width: 768px) {
+      nav { padding: 0 2rem; }
+      .nav-logo { font-size: 24px; }
+      .blog-header { padding: 5rem 2rem; }
+      .blog-header h1 { font-size: 36px; }
+      .blog-header p { font-size: 18px; }
+      .main-layout { display: grid; grid-template-columns: 280px 1fr; gap: 40px; padding: 4rem 2rem; }
+      .sidebar { position: sticky; top: 110px; height: max-content; }
+      .blog-links-list { flex-direction: column; overflow-x: visible; }
+      .blog-nav-item { white-space: normal; }
+      .content-area { padding: 3.5rem; border-radius: 16px; }
+      .post-title { font-size: 30px; }
     }
   </style>
 </head>
@@ -86,25 +103,25 @@
   </aside>
 
   <main class="content-area">
-    <!-- POST 1: Gifting Intent -->
+    <!-- POST 1 -->
     <article class="blog-post active" id="post-0">
       <div class="post-meta">Festive Curation & Thoughtful Gifting</div>
       <h2 class="post-title">Why Rare Traditional Sweets Outshine Commercial Alternatives For Luxury Diwali Gifting</h2>
       <div class="post-body">
-        <p>Gifting during Diwali or significant family celebrations has evolved. For discerning individuals seeking **unique traditional sweets for Diwali gifting**, standard mass-produced sweet boxes or factory-assembled chocolates no longer reflect a premium standard.</p>
+        <p>Gifting during Diwali or significant family celebrations has evolved. For discerning individuals seeking unique traditional sweets for Diwali gifting, standard mass-produced sweet boxes or factory-assembled chocolates no longer reflect a premium standard.</p>
         <h3>Moving Beyond Mass-Produced Confectionery</h3>
         <p>True luxury lies in exclusivity and cultural richness. Presenting a beautifully packed box of authentic Silao Khaja offers far more than a simple treat—it shares an elite piece of culinary history. Every box tells the story of 52 exquisite, paper-thin sheets rolled patiently by skilled family hands.</p>
         <h3>Flawless Purity for Exceptional Celebrations</h3>
-        <p>A premium gift must remain clean and pristine. Because our heritage batches rely strictly on **pure desi ghee** and unadulterated ingredients, they stay incredibly crisp and fresh without any artificial preservatives. This makes them a reliable and highly sophisticated choice for sending long-distance gifts to valued friends and partners across India.</p>
+        <p>A premium gift must remain clean and pristine. Because our heritage batches rely strictly on pure desi ghee and unadulterated ingredients, they stay incredibly crisp and fresh without any artificial preservatives. This makes them a reliable and highly sophisticated choice for sending long-distance gifts to valued friends and partners across India.</p>
       </div>
     </article>
 
-    <!-- POST 2: GI Tag Search Value -->
+    <!-- POST 2 -->
     <article class="blog-post" id="post-1">
       <div class="post-meta">Authenticity Laws & Culinary Legacies</div>
       <h2 class="post-title">Sourcing Direct: A Guide to Finding and Buying Genuine GI-Tagged Foods in India</h2>
       <div class="post-body">
-        <p>In a crowded digital market, finding out how to safely **buy GI tagged food products in India online** has become essential for those who care about food purity. A Geographical Indication tag is a legal protection ensuring a culinary treasure gains its special characteristics solely from its native soil, water, and ancestral community techniques.</p>
+        <p>In a crowded digital market, finding out how to safely buy GI tagged food products in India online has become essential for those who care about food purity. A Geographical Indication tag is a legal protection ensuring a culinary treasure gains its special characteristics solely from its native soil, water, and ancestral community techniques.</p>
         <h3>The Signature Value of True Nalanda Craftsmanship</h3>
         <p>Commercial bakeries frequently use regional names loosely without following traditional standards. Authentic Silao Khaja owes its delicate structure directly to the natural high-alkaline well water of Silao town. This natural water profile gives the pastry its signature puffiness—a process that modern chemical filtration methods simply cannot replicate.</p>
         <h3>Your Checklist for Verifying Genuine Batches</h3>
@@ -116,12 +133,12 @@
       </div>
     </article>
 
-    <!-- POST 3: Jaggery Health Niche -->
+    <!-- POST 3 -->
     <article class="blog-post" id="post-2">
       <div class="post-meta">Ancestral Food Choices & Purity</div>
       <h2 class="post-title">The Natural Choice: Savoring Traditional Jaggery Sweets Made Without Refined Sugars</h2>
       <div class="post-body">
-        <p>As more households look to clean up their eating habits, finding high-quality **organic jaggery sweets healthy options** has become a top priority. Moving away from bleached white sugars changes the way our bodies appreciate traditional flavors.</p>
+        <p>As more households look to clean up their eating habits, finding high-quality organic jaggery sweets healthy options has become a top priority. Moving away from bleached white sugars changes the way our bodies appreciate traditional flavors.</p>
         <h3>The Wholesome Balance of Raw Sugarcane Jaggery</h3>
         <p>Refined industrial sugar undergoes chemical bleaching that leaves behind nothing but empty carbohydrates. Raw, country jaggery (Gur), however, retains its organic plant values, natural iron, and trace magnesium properties. This allows the body to digest the sweetness at a balanced, natural pace.</p>
         <h3>Our Ancient Jaggery Batch</h3>
@@ -145,9 +162,8 @@
     document.getElementById(`tab-${index}`).classList.add('active');
     document.getElementById(`post-${index}`).classList.add('active');
     
-    if(window.innerWidth <= 800) {
-      document.querySelector('.content-area').scrollIntoView({ behavior: 'smooth' });
-    }
+    const targetOffset = document.querySelector('.content-area').offsetTop - 90;
+    window.scrollTo({ top: targetOffset, behavior: 'smooth' });
   }
 </script>
 </body>
