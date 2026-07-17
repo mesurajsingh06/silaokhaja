@@ -4,10 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- Dedicated Blog SEO Meta Tags -->
-  <title>Silao Khaja Blog — Heritage Stories, Health Guides & Comparisons</title>
-  <meta name="description" content="Discover the history of Nalanda's GI-tagged sweets, the difference between Silao and Odisha Khaja, and why our 52-layer recipe is unique." />
-  <meta name="keywords" content="Silao Khaja vs Odisha Khaja, is khaja healthy, sugar free khaja, history of nalanda sweets, bawan parat technique" />
+  <title>Traditional Sweets Guides & Gifting Strategies — Silao Khaja Knowledge Hub</title>
+  <meta name="description" content="Deep educational articles regarding unique festive corporate gifting ideas, legal GI-tag frameworks in India, and the health benefits of organic jaggery sweets." />
+  <meta name="keywords" content="unique diwali gifts corporate sweets, buy gi tag food products india online, organic jaggery sweets healthy, chemical free heritage food" />
   <link rel="canonical" href="https://silaokhaja.com/blog.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,26 +24,37 @@
     nav { position: sticky; top: 0; z-index: 200; background: rgba(255,251,242,0.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--gold-border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 60px; }
     .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: var(--brown); text-decoration: none; }
     .nav-logo span { color: var(--gold); font-style: italic; }
-    .nav-links { display: flex; align-items: center; gap: 20px; }
-    .nav-link { color: var(--text-mid); text-decoration: none; font-size: 14px; font-weight: 500; }
-    .blog-header { text-align: center; padding: 4rem 2rem 2rem; background: linear-gradient(160deg, #FEF0CC 0%, #FFFBF2 100%); border-bottom: 1px solid var(--gold-border); }
-    .blog-header h1 { font-family: 'Cormorant Garamond', serif; font-size: 42px; color: var(--brown); }
-    .section { padding: 3rem 2rem; max-width: 800px; margin: 0 auto; }
+    .blog-header { text-align: center; padding: 4rem 2rem; background: linear-gradient(160deg, #FEF0CC 0%, #FFFBF2 100%); border-bottom: 1px solid var(--gold-border); }
+    .blog-header h1 { font-family: 'Cormorant Garamond', serif; font-size: 38px; color: var(--brown); }
     
-    /* Blog navigation sidebar/tabs */
-    .blog-nav { display: flex; gap: 8px; margin-bottom: 2rem; overflow-x: auto; padding-bottom: 6px; }
-    .blog-tab { background: #fff; border: 1px solid var(--gold-border); border-radius: 8px; padding: 10px 18px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; color: var(--text-mid); }
-    .blog-tab.active { background: var(--brown); color: #fff; border-color: var(--brown); }
+    .main-layout { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 280px 1fr; gap: 40px; }
+    .sidebar { position: sticky; top: 100px; height: max-content; }
+    .sidebar h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold); margin-bottom: 1rem; }
+    .blog-links-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .blog-nav-item { display: block; background: #fff; padding: 12px 16px; border: 1px solid var(--gold-border); border-radius: 8px; text-decoration: none; color: var(--text-mid); font-size: 14px; font-weight: 500; transition: all 0.2s; }
+    .blog-nav-item.active, .blog-nav-item:hover { background: var(--brown); color: #fff; border-color: var(--brown); }
     
-    .blog-content-wrapper { background: #fff; border: 1px solid var(--gold-border); border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 12px var(--shadow); }
-    .blog-article { display: none; }
-    .blog-article.active { display: block; }
-    .blog-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--brown); margin-bottom: 1.25rem; }
-    .blog-body p { font-size: 15px; color: var(--text-mid); margin-bottom: 1.25rem; line-height: 1.7; }
-    .blog-body strong { color: var(--brown); }
+    .content-area { background: #fff; border: 1px solid var(--gold-border); border-radius: 16px; padding: 3rem; box-shadow: 0 4px 16px var(--shadow); }
+    .blog-post { display: none; }
+    .blog-post.active { display: block; }
+    
+    .post-meta { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+    .post-title { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--brown); line-height: 1.2; margin-bottom: 1.5rem; }
+    .post-body h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--brown); margin: 1.5rem 0 0.5rem; }
+    .post-body p { font-size: 15px; color: var(--text-mid); margin-bottom: 1.25rem; line-height: 1.7; }
+    .post-body ul { margin: 0 0 1.25rem 1.25rem; color: var(--text-mid); font-size: 14.5px; }
+    .post-body ul li { margin-bottom: 6px; }
+    .post-body strong { color: var(--brown); }
     
     footer { text-align: center; padding: 2.5rem 2rem; font-size: 12px; color: var(--text-muted); background: var(--cream-2); border-top: 1px solid var(--gold-border); }
-    @media (max-width: 600px) { nav { padding: 0 1rem; } .blog-header h1 { font-size: 32px; } .blog-content-wrapper { padding: 1.5rem; } }
+    
+    @media (max-width: 800px) {
+      .main-layout { grid-template-columns: 1fr; padding: 2rem 1rem; }
+      .sidebar { position: static; }
+      .blog-links-list { flex-direction: row; overflow-x: auto; padding-bottom: 8px; }
+      .blog-nav-item { white-space: nowrap; }
+      .content-area { padding: 1.5rem; }
+    }
   </style>
 </head>
 <body>
@@ -52,77 +62,89 @@
 <nav>
   <a href="index.html" class="nav-logo">Silao<span>Khaja</span></a>
   <div class="nav-links">
-    <a href="index.html" class="nav-link">← Back to Store</a>
+    <a href="index.html" class="nav-link">← Return to Storefront</a>
   </div>
 </nav>
 
 <header class="blog-header">
-  <h1>The Silao Khaja Chronicle</h1>
-  <p style="color: var(--text-muted); margin-top: 0.5rem;">Exploring the history, health, and craft behind India's ancient 52-layer pastry.</p>
+  <h1>The Culinary Knowledge Database</h1>
+  <p style="color: var(--text-muted); margin-top: 0.5rem;">Deep analytics regarding Indian food certifications, premium gifting models, and metabolic science.</p>
 </header>
 
-<main class="section">
-  <div class="blog-nav">
-    <button class="blog-tab active" onclick="switchBlog(0)">Vs Odisha Khaja</button>
-    <button class="blog-tab" onclick="switchBlog(1)">Is Khaja Healthy?</button>
-    <button class="blog-tab" onclick="switchBlog(2)">Ancient History</button>
-    <button class="blog-tab" onclick="switchBlog(3)">Bawan Parat Secret</button>
-  </div>
+<div class="main-layout">
+  <aside class="sidebar">
+    <h2>Select Article</h2>
+    <nav class="blog-links-list">
+      <a href="#gifting" class="blog-nav-item active" id="tab-0" onclick="showPost(0, event)">Unique Festival Gifting</a>
+      <a href="#gi-tag" class="blog-nav-item" id="tab-1" onclick="showPost(1, event)">GI Tag Food Guide</a>
+      <a href="#jaggery" class="blog-nav-item" id="tab-2" onclick="showPost(2, event)">Organic Jaggery Benefits</a>
+    </nav>
+  </aside>
 
-  <div class="blog-content-wrapper">
-    <!-- ARTICLE 1 -->
-    <article class="blog-article active" id="blog-0">
-      <h2 class="blog-title">Silao Khaja vs Odisha Khaja: Understanding the Key Structural Differences</h2>
-      <div class="blog-body">
-        <p>When searching to buy high-quality heritage sweets online, a common point of confusion is the core difference between the <strong>Silao Khaja of Bihar</strong> and the famous <strong>Puri Khaja of Odisha</strong>. While both hold tremendous religious values across India, their structures explicitly diverge.</p>
-        <p>The premium <strong>Odisha Khaja</strong> utilizes thicker dough segments. This results in a harder, hyper-dense structural rectangle that holds form firmly when packed dry for broad religious distributions during events like the Rath Yatra.</p>
-        <p>Conversely, authentic <strong>Silao Khaja</strong> is structurally famous for its absolute weightlessness and extreme flakiness. Confectioners flatten the pastry into multiple translucent layers that dissolve seamlessly onto the palate. If you prefer a lighter texturing balance that honors pure desi ghee saturation, ordering your stock from Nalanda provides the premier choice.</p>
+  <main class="content-area">
+    <!-- POST 1: Gifting Intent -->
+    <article class="blog-post active" id="post-0">
+      <div class="post-meta">Corporate & Festive Curation Strategies</div>
+      <h2 class="post-title">Why Unique Traditional Sweets Make the Best Diwali & Corporate Gifting Choices</h2>
+      <div class="post-body">
+        <p>In the contemporary corporate landscape, finding **unique traditional sweets for Diwali gifting** has transformed from a basic routine task into an essential branding statement. Most organizations default to standard commercial sweet arrangements or factory chocolate boxes, which often fail to create a memorable impression.</p>
+        <h3>Breaking Away From Commercial Sweet Gifting</h3>
+        <p>Modern professionals prefer authentic value and historical depth. Choosing a rare, artisanal product like authentic Silao Khaja instantly elevates your corporate presentation. Instead of generic, chemical-stabilized sweets, you deliver an unfolding historical story—52 structural layers handcrafted with meticulous skill.</p>
+        <h3>Unboxing an Unforgettable Client Experience</h3>
+        <p>Premium corporate gifts must offer excellent shelf stability while remaining completely natural. Because our pure desi ghee variant preserves its signature crisp texture beautifully without any artificial chemical inputs, it serves as an excellent premium option for remote client dispatches across India.</p>
       </div>
     </article>
 
-    <!-- ARTICLE 2 -->
-    <article class="blog-article" id="blog-1">
-      <h2 class="blog-title">Is Khaja Sweet Healthy? Analyzing Nutritional Profiles & Diabetic Alternatives</h2>
-      <div class="blog-body">
-        <p>Modern dietary considerations require a deeper look into traditional snacks. Many clients wonder: <em>Is Khaja sweet healthy or suitable for structured wellness plans?</em> Traditional sugar-syrup pastries are caloric investments, but the core processing mechanics behind authentic Nalanda production reveal clean structural realities.</p>
-        <p>Unlike heavy contemporary bakery goods processed using processed hydrogenated fats, artisanal Khaja relies purely on unadulterated clear fats like <strong>pure desi ghee</strong> and nutrient-dense <strong>Murariya wheat</strong> inputs. Ghee contains stable fatty profiles that streamline absorption better than standard seed oils.</p>
-        <p>For individuals tracking glycemic indexes closely or handling diabetic limitations, we introduce our custom <strong>Namkeen Khaja (Savory)</strong> option. This preparation eliminates simple glucose coats completely, utilizing local therapeutic black salt and regional spices to protect standard blood sugar safety parameters without sacrificing texture.</p>
+    <!-- POST 2: GI Tag Search Value -->
+    <article class="blog-post" id="post-1">
+      <div class="post-meta">Intellectual Property & Food Authenticity</div>
+      <h2 class="post-title">How to Verify & Buy Genuine GI-Tagged Food Products in India Safely</h2>
+      <div class="post-body">
+        <p>With counterfeit items and loose brand terminology flooding digital storefronts, learning how to safely source and **buy GI tagged food products in India online** is vital to protecting authentic food ecosystems. A Geographical Indication label is a legal shield recognizing that a specific culinary item derives its unique qualities purely from its distinct geographical origins.</p>
+        <h3>The Hidden Dangers of Counterfeit Traditional Confectionery</h3>
+        <p>Many commercial bakeries exploit cultural names without observing traditional standards. Authentic Silao Khaja features distinct physical properties linked directly to Nalanda's local groundwater composition and microclimate environments, rendering attempts to copy the recipe elsewhere legally void.</p>
+        <h3>Verifying Your Direct Purchase Blueprint</h3>
+        <ul>
+          <li><strong>Check Official Registration Coordinates:</strong> Ensure documentation aligns clearly with active certifications (Registration No. 584 17).</li>
+          <li><strong>Verify Community Sourcing Roots:</strong> Confirm items are prepared strictly by licensed artisan groups like the traditional Sah guild families.</li>
+          <li><strong>Avoid Unrealistic Discounts:</strong> Premium ingredients like real clarified butter (Desi Ghee) maintain clear floor pricing realities.</li>
+        </ul>
       </div>
     </article>
 
-    <!-- ARTICLE 3 -->
-    <article class="blog-article" id="blog-2">
-      <h2 class="blog-title">The Complete History of Nalanda GI Tag Sweets & Royal Associations</h2>
-      <div class="blog-body">
-        <p>The cultural framework of Bihar's food culture is deeply intertwined with human civilization itself. Long before receiving its official legal <strong>Geographical Indication (GI) Tag</strong> validation in 2018, the unique layered pastry of Silao had successfully survived thousands of years of shifting empire contexts.</p>
-        <p>Written records inside Chanakya's historical economic treatise, the <em>Arthashastra</em>, make structural mentions of layered wheat formulas praised explicitly as "food configurations for power sustenance". Local legendary folklore indicates that during travels across Magadha, Gautama Buddha himself was honored with plates of fresh Khaja.</p>
-        <p>By protecting these historical preparation metrics under strict global intellectual property guidelines, modern consumers are guaranteed an unadulterated recipe unchanged since 320 BCE. Every purchase supports heritage artisan families keeping this culinary art alive.</p>
+    <!-- POST 3: Jaggery Health Niche -->
+    <article class="blog-post" id="post-2">
+      <div class="post-meta">Metabolic Clean-Eating Research</div>
+      <h2 class="post-title">The Nutritional Value of Organic Jaggery Sweets vs Refined White Sugars</h2>
+      <div class="post-body">
+        <p>As households systematically auditing their health choices look for reliable alternatives, the demand for **organic jaggery sweets healthy configurations** continues to grow. Choosing unrefined jaggery (Gur) over chemical white sugars alters how the human digestive tract handles metabolic processing.</p>
+        <h3>The Biochemical Reality of Iron-Rich Sweeteners</h3>
+        <p>Refined white sugar delivers empty carbohydrates that trigger rapid glycemic spikes. In contrast, clean, traditional jaggery retains organic trace minerals, essential iron, and magnesium properties derived from clean sugar cane reductions. This slower processing speed offers a cleaner, more sustainable metabolic energy return.</p>
+        <h3>Savoring Our Heritage Gur Variant</h3>
+        <p>Our custom Gur Khaja infuses these nutritional benefits into our classic 52-layer pastry architecture. By completely substituting modern crystalline sugars with premium dark jaggery, we capture a rich, traditional flavor note that honors your clean-eating health goals perfectly.</p>
       </div>
     </article>
-
-    <!-- ARTICLE 4 -->
-    <article class="blog-article" id="blog-3">
-      <h2 class="blog-title">Decoding the Bawan Parat: How Artisans Master 52 Translucent Layers</h2>
-      <div class="blog-body">
-        <p>The legendary defining characteristic of real Silao Khaja lies within its math-driven execution: the <strong>Bawan Parat (52 Layers) technique</strong>. Replicating this exact layering threshold is practically impossible for modern mechanical operations outside the localized zones of Nalanda.</p>
-        <p>The process demands hyper-stretching dough variants derived exclusively from local Murariya wheat fields. This specialized flour grain produces flexible gluten sheets that can be pulled thin without tearing. Confectioners gently align 52 separate microscopic layers separated cleanly by a light paste mixture of pure ghee and flour dust.</p>
-        <p>When placed carefully inside boiling ghee, the regional high-alkaline well water trapped within the dough layers undergoes steam flash expansion. This forces the 52 layers to puff outward instantly, giving the sweet its legendary crisp texture.</p>
-      </div>
-    </article>
-  </div>
-</main>
+  </main>
+</div>
 
 <footer>
   <span class="f-logo">Silao<span>Khaja</span></span>
-  Nalanda, Bihar, India &nbsp;·&nbsp; Authentic Sah Guild Records
+  Nalanda Knowledge Framework Database &nbsp;·&nbsp; Protected Records Section
 </footer>
 
 <script>
-  function switchBlog(index) {
-    document.querySelectorAll('.blog-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.blog-article').forEach(a => a.classList.remove('active'));
-    document.querySelectorAll('.blog-tab')[index].classList.add('active');
-    document.getElementById(`blog-${index}`).classList.add('active');
+  function showPost(index, event) {
+    event.preventDefault();
+    document.querySelectorAll('.blog-nav-item').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.blog-post').forEach(p => p.classList.remove('active'));
+    
+    document.getElementById(`tab-${index}`).classList.add('active');
+    document.getElementById(`post-${index}`).classList.add('active');
+    
+    // Smooth scroll support on mobile layouts
+    if(window.innerWidth <= 800) {
+      document.querySelector('.content-area').scrollIntoView({ behavior: 'smooth' });
+    }
   }
 </script>
 </body>
