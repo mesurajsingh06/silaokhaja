@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Authentic Silao Khaja — Taste Nalanda's Ancient 52-Layer Sweet</title>
-  <meta name="description" content="Savor the legendary 52-layer crispy sweet from Nalanda, Bihar. Made with pure desi ghee and traditional Murariya wheat. GI-tag protected. Order fresh via WhatsApp." />
+  <title>Authentic Silao Khaja — Premium 52-Layer Indian Heritage Sweet</title>
+  <meta name="description" content="Explore the royal culinary history of Nalanda's GI-tagged 52-layer crispy sweet. Handcrafted in pure desi ghee and organic country jaggery. Order fresh via WhatsApp." />
   <link rel="canonical" href="https://silaokhaja.com" />
 
   <!-- Google Fonts: Marcellus & Lora -->
@@ -57,7 +57,7 @@
       z-index: 0;
     }
 
-    /* MOBILE FIRST HEADER & NAV */
+    /* PREMIUM MOBILE-FIRST NAVIGATION */
     nav {
       position: sticky; top: 0; z-index: 200;
       background: rgba(255,251,242,0.96);
@@ -74,11 +74,13 @@
       color: var(--brown); text-decoration: none;
       letter-spacing: 0.05em;
       text-transform: uppercase;
+      cursor: pointer;
     }
     .nav-logo span { color: var(--gold); }
 
     .nav-links { display: flex; align-items: center; gap: 12px; }
-    .nav-link { color: var(--text-mid); text-decoration: none; font-size: 13px; font-family: 'Marcellus', serif; letter-spacing: 0.05em; }
+    .nav-link { color: var(--text-mid); text-decoration: none; font-size: 13px; font-family: 'Marcellus', serif; letter-spacing: 0.05em; cursor: pointer; }
+    .nav-link.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
 
     .nav-wa {
       display: flex; align-items: center; gap: 6px;
@@ -89,6 +91,15 @@
       letter-spacing: 0.05em;
     }
 
+    /* GLOBAL APP LAYOUT CONTAINERS */
+    .view-section { display: none; animation: fadeIn 0.4s ease both; }
+    .view-section.active { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     .hero {
       position: relative;
       background: linear-gradient(160deg, #FEF0CC 0%, #FEF8EC 40%, #FFFBF2 100%);
@@ -96,244 +107,315 @@
       text-align: center;
       border-bottom: 1px solid var(--gold-border);
     }
-
-    .hero-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
-
-    .gi-pill {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--green-light); color: var(--green);
-      border: 1px solid rgba(45,92,14,0.18); border-radius: 99px;
-      font-size: 11px; font-weight: 600; padding: 6px 14px; margin-bottom: 1.5rem;
-      text-transform: uppercase; letter-spacing: 0.05em;
-    }
+    .hero-inner { max-width: 900px; margin: 0 auto; }
+    .gi-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--green-light); color: var(--green); border: 1px solid rgba(45,92,14,0.18); border-radius: 99px; font-size: 11px; font-weight: 600; padding: 6px 14px; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
     .gi-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); display: inline-block; }
-
-    .hero h1 {
-      font-family: 'Marcellus', serif;
-      font-size: clamp(28px, 6vw, 56px); line-height: 1.2;
-      color: var(--brown); margin-bottom: 1.25rem;
-      text-transform: uppercase; letter-spacing: 0.03em;
-    }
-    .hero h1 .line2 { color: var(--gold); display: block; font-family: 'Marcellus', serif; }
-
+    .hero h1 { font-family: 'Marcellus', serif; font-size: clamp(28px, 6vw, 56px); line-height: 1.2; color: var(--brown); margin-bottom: 1.25rem; text-transform: uppercase; letter-spacing: 0.03em; }
+    .hero h1 .line2 { color: var(--gold); display: block; }
     .hero-tagline { font-size: 16px; color: var(--text-mid); max-width: 650px; margin: 0 auto 2.5rem; font-style: italic; }
-
-    .hero-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 2.5rem; }
-    .h-pill {
-      background: rgba(255,255,255,0.9); border: 1px solid var(--gold-border);
-      border-radius: 4px; padding: 6px 14px; font-size: 12px; color: var(--brown);
-      font-family: 'Marcellus', serif; letter-spacing: 0.05em;
-    }
 
     .section { padding: 3rem 1rem; max-width: 850px; margin: 0 auto; }
     .sec-label { font-family: 'Marcellus', serif; font-size: 11px; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; margin-bottom: 6px; display: block; text-align: center; }
     .sec-title { font-family: 'Marcellus', serif; font-size: clamp(22px, 4vw, 32px); color: var(--brown); margin-bottom: 1.75rem; text-align: center; text-transform: uppercase; letter-spacing: 0.02em; }
 
-    .variant-chat { display: flex; align-items: flex-start; gap: 12px; background: var(--cream-2); border: 1px solid var(--gold-border); border-radius: 12px; padding: 1rem; margin-bottom: 1.5rem; }
-    .chat-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--gold-pale); display: flex; align-items: center; justify-content: center; font-size: 18px; border: 1px solid var(--gold-border); flex-shrink: 0; }
-    .chat-body { flex: 1; }
-    .chat-name { font-family: 'Marcellus', serif; font-size: 11px; color: var(--gold-deep); margin-bottom: 2px; letter-spacing: 0.05em; }
-    .chat-text { font-size: 14.5px; color: var(--text-mid); }
+    /* CARD STRUCTURES */
+    .grid-container { display: grid; grid-template-columns: 1fr; gap: 16px; margin-bottom: 2rem; }
+    @media (min-width: 520px) { .grid-container { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 768px) { .grid-container { grid-template-columns: repeat(4, 1fr); } }
 
-    /* MOBILE-FIRST PRODUCT CARDS GRID */
-    .products { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 2rem; }
-    @media (min-width: 480px) { .products { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 768px) { .products { grid-template-columns: repeat(4, 1fr); } }
+    .ecom-card { background: #fff; border: 1px solid var(--gold-border); border-radius: 12px; padding: 1.5rem 1.25rem; cursor: pointer; transition: all 0.3s ease; position: relative; }
+    .ecom-card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px var(--shadow); border-color: var(--gold); }
+    .card-emoji { font-size: 36px; margin-bottom: 12px; display: block; }
+    .card-title { font-family: 'Marcellus', serif; font-size: 16px; color: var(--brown); margin-bottom: 4px; }
+    .card-price { font-size: 14px; color: var(--gold-deep); font-weight: 600; margin-bottom: 8px; }
+    .card-meta { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .btn-view { display: inline-block; margin-top: 12px; font-family: 'Marcellus', serif; font-size: 12px; color: var(--gold-deep); text-decoration: none; border-bottom: 1px dashed var(--gold); }
 
-    .product-card { background: #fff; border: 1px solid var(--gold-border); border-radius: 12px; padding: 1.25rem 1rem; cursor: pointer; position: relative; transition: all 0.3s ease; }
-    .product-card.selected { border: 2px solid var(--gold); background: var(--gold-pale); }
-    .p-check { position: absolute; top: 12px; right: 12px; width: 20px; height: 20px; border-radius: 50%; background: var(--gold); color: #fff; display: none; align-items: center; justify-content: center; font-size: 11px; }
-    .product-card.selected .p-check { display: flex; }
-    .p-emoji { font-size: 28px; margin-bottom: 10px; display: block; }
-    .p-name { font-family: 'Marcellus', serif; font-size: 15px; color: var(--brown); margin-bottom: 2px; }
-    .p-price { font-size: 13.5px; color: var(--gold-deep); font-weight: 600; }
-    .p-desc { font-size: 13px; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
-    .p-tag { display: inline-block; margin-top: 8px; background: var(--cream-3); color: var(--gold-deep); font-size: 10px; font-family: 'Marcellus', serif; padding: 3px 10px; border-radius: 4px; }
+    /* DEDICATED PRODUCT DETAILS CONTAINER */
+    .pdp-wrapper { background: #fff; border: 1px solid var(--gold-border); border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 6px 20px var(--shadow); }
+    .pdp-header-row { display: flex; align-items: center; gap: 16px; margin-bottom: 1rem; border-bottom: 1px solid var(--gold-border); padding-bottom: 1rem; }
+    .pdp-large-emoji { font-size: 54px; }
+    .pdp-meta-title h2 { font-family: 'Marcellus', serif; font-size: 28px; color: var(--brown); text-transform: uppercase; }
+    .pdp-meta-title .price-tag { font-size: 18px; color: var(--gold-deep); font-weight: 600; }
+    .pdp-body h4 { font-family: 'Marcellus', serif; font-size: 16px; color: var(--brown); margin: 1.5rem 0 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .pdp-body p { font-size: 15.5px; color: var(--text-mid); margin-bottom: 1.25rem; }
 
-    .wa-section { margin-bottom: 2.5rem; }
-    .btn-whatsapp { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; background: #25D366; color: #fff; border: none; border-radius: 12px; padding: 16px; font-size: 15px; font-weight: 600; font-family: 'Marcellus', serif; letter-spacing: 0.05em; cursor: pointer; box-shadow: 0 4px 12px rgba(37,211,102,0.15); transition: all 0.2s; }
+    .btn-pdp-whatsapp { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; background: #25D366; color: #fff; border: none; border-radius: 12px; padding: 18px; font-size: 16px; font-weight: 600; font-family: 'Marcellus', serif; letter-spacing: 0.05em; cursor: pointer; margin-top: 2rem; box-shadow: 0 4px 16px rgba(37,211,102,0.2); }
+    .btn-pdp-whatsapp:hover { background: #1aad54; transform: translateY(-1px); }
 
-    /* MOBILE SIDE-SCROLL NAVIGATION FOR TABS */
-    .blog-nav { display: flex; gap: 8px; margin-bottom: 1.5rem; overflow-x: auto; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
-    @media (min-width: 600px) { .blog-nav { justify-content: center; } }
-    .blog-tab { background: #fff; border: 1px solid var(--gold-border); border-radius: 6px; padding: 8px 16px; font-size: 12px; font-family: 'Marcellus', serif; letter-spacing: 0.05em; cursor: pointer; white-space: nowrap; color: var(--text-mid); }
-    .blog-tab.active { background: var(--brown); color: #fff; border-color: var(--brown); }
-    
-    .blog-content-wrapper { background: #fff; border: 1px solid var(--gold-border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 12px var(--shadow); }
-    @media (min-width: 768px) { .blog-content-wrapper { padding: 2.5rem; } }
-    .blog-article { display: none; }
-    .blog-article.active { display: block; }
-    .blog-title { font-family: 'Marcellus', serif; font-size: 20px; color: var(--brown); margin-bottom: 1rem; letter-spacing: 0.01em; line-height: 1.4; }
-    .blog-body p { font-size: 14.5px; color: var(--text-mid); margin-bottom: 1rem; }
+    /* KNOWLEDGE HUB ARCHITECTURE */
+    .blog-sidebar-layout { display: flex; flex-direction: column; gap: 24px; }
+    .blog-nav-strip { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 8px; }
+    .blog-nav-chip { background: #fff; border: 1px solid var(--gold-border); border-radius: 6px; padding: 10px 16px; font-size: 13px; font-family: 'Marcellus', serif; color: var(--text-mid); cursor: pointer; white-space: nowrap; }
+    .blog-nav-chip.active { background: var(--brown); color: #fff; border-color: var(--brown); }
+    .blog-display-card { background: #fff; border: 1px solid var(--gold-border); border-radius: 16px; padding: 2rem 1.5rem; box-shadow: 0 4px 12px var(--shadow); }
+    .blog-pane { display: none; }
+    .blog-pane.active { display: block; }
+    .pane-title { font-family: 'Marcellus', serif; font-size: 24px; color: var(--brown); margin-bottom: 1.25rem; text-transform: uppercase; }
 
-    .faq-container { display: flex; flex-direction: column; gap: 10px; margin-top: 1.25rem; }
-    details { background: #fff; border: 1px solid var(--gold-border); border-radius: 12px; padding: 0.85rem 1.25rem; }
-    summary { font-family: 'Marcellus', serif; font-size: 14px; color: var(--brown); cursor: pointer; display: flex; justify-content: space-between; letter-spacing: 0.02em; gap: 10px; }
-    .faq-content { font-size: 14px; color: var(--text-mid); margin-top: 8px; }
-
-    .blog-banner-box { background: linear-gradient(135deg, var(--brown), var(--brown-mid)); border-radius: 12px; padding: 2rem 1.25rem; text-align: center; color: #fff; margin-top: 2.5rem; border: 1px solid var(--gold); }
-    .blog-banner-box h3 { font-family: 'Marcellus', serif; font-size: 20px; letter-spacing: 0.05em; }
-    .btn-read-blog { display: inline-block; background: var(--gold); color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-family: 'Marcellus', serif; letter-spacing: 0.05em; font-size: 13px; margin-top: 1.25rem; }
-
-    .divider { border: none; border-top: 1px solid var(--gold-border); max-width: 850px; margin: 0 auto; }
-    
+    .divider { border: none; border-top: 1px solid var(--gold-border); max-width: 850px; margin: 2rem auto; }
     .trust-strip { background: var(--cream-2); border-top: 1px solid var(--gold-border); border-bottom: 1px solid var(--gold-border); padding: 1.5rem 1rem; }
-    .trust-inner { max-width: 850px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; justify-content: center; align-items: center; font-family: 'Marcellus', serif; font-size: 12px; letter-spacing: 0.05em; }
+    .trust-inner { max-width: 850px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: center; align-items: center; font-family: 'Marcellus', serif; font-size: 12px; letter-spacing: 0.05em; }
 
     footer { text-align: center; padding: 2.5rem 1rem; font-size: 12px; color: var(--text-muted); background: var(--cream-2); border-top: 1px solid var(--gold-border); }
-    footer .f-logo { font-family: 'Marcellus', serif; font-size: 22px; color: var(--brown); display: block; margin-bottom: 6px; letter-spacing: 0.05em; }
+    footer .f-logo { font-family: 'Marcellus', serif; font-size: 22px; color: var(--brown); display: block; margin-bottom: 6px; text-transform: uppercase; }
     footer .f-logo span { color: var(--gold); }
 
     @media (min-width: 768px) {
       nav { padding: 0 2rem; }
       .nav-logo { font-size: 24px; }
       .nav-links { gap: 24px; }
-      .nav-link { font-size: 15px; }
-      .nav-wa { padding: 10px 18px; font-size: 14px; }
-      .hero { padding: 6rem 2rem 5rem; }
-      .section { padding: 4.5rem 2rem; }
+      .nav-link { font-size: 14px; }
+      .hero { padding: 5.5rem 2rem 4.5rem; }
+      .section { padding: 4rem 2rem; }
+      .blog-sidebar-layout { display: grid; grid-template-columns: 260px 1fr; gap: 32px; }
+      .blog-nav-strip { flex-direction: column; overflow-x: visible; }
+      .blog-nav-chip { white-space: normal; }
     }
   </style>
 </head>
 <body>
 
+<!-- CORE PLATFORM NAVIGATION -->
 <nav>
-  <a href="#" class="nav-logo">Silao<span>Khaja</span></a>
+  <a onclick="navigateTo('home')" class="nav-logo">Silao<span>Khaja</span></a>
   <div class="nav-links">
-    <a href="blog.html" class="nav-link">Chronicles</a>
-    <a href="#" class="nav-wa" onclick="openGeneralWhatsApp(event)">WhatsApp Shop</a>
+    <a onclick="navigateTo('home')" class="nav-link active" id="lnk-home">Shop</a>
+    <a onclick="navigateTo('about')" class="nav-link" id="lnk-about">Our Story</a>
+    <a onclick="navigateTo('blog')" class="nav-link" id="lnk-blog">Chronicles</a>
   </div>
+  <a href="#" class="nav-wa" onclick="openGeneralWhatsApp(event)">WhatsApp Support</a>
 </nav>
 
-<header class="hero">
-  <div class="hero-inner">
-    <div class="gi-pill"><span class="gi-dot"></span>Official GI Tag Protected · Nalanda Heritage</div>
-    <h1>India's Most Ancient Sweet<span class="line2">From Nalanda to Your Home</span></h1>
-    <p class="hero-tagline">Taste a 2,300-year-old legacy. 52 delicate, paper-thin layers handcrafted with rare local wheat, pure desi ghee, and the ancient well water of Silao town.</p>
-    <div class="hero-pills">
-      <span class="h-pill">🏺 Since 320 BCE</span>
-      <span class="h-pill">🧈 Pure Desi Ghee</span>
-      <span class="h-pill">📜 52 Layers</span>
+<!-- VIEW 1: HOME VARIANT CATALOG -->
+<div id="view-home" class="view-section active">
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="gi-pill"><span class="gi-dot"></span>Official GI Tag Protected · Nalanda Collective</div>
+      <h1>India's Most Ancient Sweet<span class="line2">Delivered Direct from Nalanda</span></h1>
+      <p class="hero-tagline">Indulge in a 2,300-year-old culinary standard. 52 paper-thin layers rolled patiently by traditional guilds, using native alkaline well water and pure single-origin ghee.</p>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-  <section class="section" id="order">
-    <span class="sec-label">Savor the Heritage</span>
-    <h2 class="sec-title">Select Your Custom Batch</h2>
-
-    <div class="variant-chat" id="chat-bubble">
-      <div class="chat-avatar">🧈</div>
-      <div class="chat-body">
-        <span class="chat-name">THE MASTER HALWAI</span>
-        <p class="chat-text" id="chat-text">Ah, the **Desi Ghee Khaja**. This is our finest pride. Crisp, rich, fried in pure clarified butter, with a deep golden aroma. It stays perfectly fresh for an entire month—ideal for family gatherings and royal gifting. 🧈</p>
-      </div>
-    </div>
-
-    <div class="products" id="products">
-      <div class="product-card selected" onclick="selectProduct(this, 'Desi Ghee Khaja', '₹1,100–₹1,599/kg', '🧈', 'Ah, the **Desi Ghee Khaja**. This is our finest pride. Crisp, rich, fried in pure clarified butter, with a deep golden aroma. It stays perfectly fresh for an entire month—ideal for family gatherings and royal gifting. 🧈')">
-        <div class="p-check">✓</div><span class="p-emoji">🧈</span><h3 class="p-name">Desi Ghee</h3><div class="p-price">₹1,100–₹1,599/kg</div><p class="p-desc">Fried in pure ghee. Intensely aromatic, crisp texture, longest shelf life.</p><span class="p-tag">ROYAL CHOICE</span>
-      </div>
-      <div class="product-card" onclick="selectProduct(this, 'Gur Khaja (Jaggery)', '₹1,100–₹1,299/kg', '🍯', 'An ancient taste, the **Gur Khaja**. Instead of sugar, we sweeten these flaky layers with raw, unrefined country jaggery. It gives an earthy flavor and a rich, dark hue. Loved by heritage purists. 🍯')">
-        <div class="p-check">✓</div><span class="p-emoji">🍯</span><h3 class="p-name">Gur (Jaggery)</h3><div class="p-price">₹1,100–₹1,299/kg</div><p class="p-desc">Sweetened with raw country jaggery. Deep, earthy, beautifully dark.</p><span class="p-tag">HERITAGE TASTE</span>
-      </div>
-      <div class="product-card" onclick="selectProduct(this, 'Sada Sweet Khaja', '₹500–₹899/kg', '✨', 'Our **Sada Sweet Khaja** is the time-tested classic. Light, exceptionally flaky layers dipped in a delicate, clean crystal sugar syrup. Simple, crisp, and nostalgic. ✨')">
-        <div class="p-check">✓</div><span class="p-emoji">✨</span><h3 class="p-name">Sada (Sweet)</h3><div class="p-price">₹500–₹899/kg</div><p class="p-desc">The standard classic. Light, crispy layers coated in clean sugar syrup.</p><span class="p-tag">TIMELESS CLASSIC</span>
-      </div>
-      <div class="product-card" onclick="selectProduct(this, 'Namkeen Khaja', '₹380–₹500/kg', '🧂', 'For those who love savory snacking, the **Namkeen Khaja**. We use the exact same 52 layers, but skip the sweet syrup entirely. Spiced with carom seeds and local salt. Perfect for tea-time or diabetic diets. 🧂')">
-        <div class="p-check">✓</div><span class="p-emoji">🧂</span><h3 class="p-name">Namkeen (Savory)</h3><div class="p-price">₹380–₹500/kg</div><p class="p-desc">Savory batch with ajwain and rock salt. Entirely sugar-free.</p><span class="p-tag">SUGAR FREE</span>
-      </div>
-    </div>
-
-    <div class="wa-section">
-      <button class="btn-whatsapp" id="wa-btn" onclick="openWhatsApp()">Order Desi Ghee Khaja on WhatsApp</button>
-    </div>
-  </section>
-
-  <hr class="divider" />
-
-  <section class="section" id="chronicle">
-    <span class="sec-label">The Heritage</span>
-    <h2 class="sec-title">The Silao Lore & Secrets</h2>
+  <main class="section">
+    <span class="sec-label">The Collection</span>
+    <h2 class="sec-title">Explore Artisanal Batches</h2>
     
-    <div class="blog-nav">
-      <button class="blog-tab active" onclick="switchBlog(0)">Vs Odisha Khaja</button>
-      <button class="blog-tab" onclick="switchBlog(1)">Is It Healthy?</button>
-      <button class="blog-tab" onclick="switchBlog(2)">Ancient History</button>
-      <button class="blog-tab" onclick="switchBlog(3)">52 Layers Secret</button>
-    </div>
+    <div class="grid-container">
+      <div class="ecom-card" onclick="navigateToProduct(0)">
+        <span class="card-emoji">🧈</span>
+        <h3 class="card-title">Desi Ghee Batch</h3>
+        <div class="card-price">₹1,100 - ₹1,599 / kg</div>
+        <p class="card-meta">Fried in pure clarified butter. Robust golden aroma & premium monthly shelf-stability.</p>
+        <span class="btn-view">View Specifications →</span>
+      </div>
 
-    <div class="blog-content-wrapper">
-      <article class="blog-article active" id="blog-0">
-        <h3 class="blog-title">Silao vs Odisha: The Tale of Two Custodians</h3>
-        <div class="blog-body"><p>While Odisha’s Puri Khaja is thick and dense to withstand long temple journeys, our authentic **Silao Khaja** is completely light and flaky. Our artisans roll sheets so incredibly thin that the sweet melts almost instantly on your tongue.</p></div>
-      </article>
-      <article class="blog-article" id="blog-1">
-        <h3 class="blog-title">Is a Sweet Healthy? The Real Ingredients</h3>
-        <div class="blog-body"><p>True traditional luxury uses clean ingredients. By discarding heavy industrial fats and using real desi ghee and local heirloom wheat, our sweet doesn't weigh down the stomach. For diabetic tracking, our savory batch drops the syrup entirely.</p></div>
-      </article>
-      <article class="blog-article" id="blog-2">
-        <h3 class="blog-title">A Royal Blessing Dating to 320 BCE</h3>
-        <div class="blog-body"><p>Long before earning its official legal GI Tag in 2018, this multi-layered delicacy welcomed kings and sages. Local records show that as Lord Buddha walked between Rajgir and early Nalanda, the townspeople honored him with this very pastry.</p></div>
-      </article>
-      <article class="blog-article" id="blog-3">
-        <h3 class="blog-title">The Hand-Crafted Art of 52 Layers</h3>
-        <div class="blog-body"><p>Affectionately known as the *Bawan Parat* style, creating 52 distinct sheets requires hours of skilled hand-rolling. When dropped into pure ghee, the mineral properties of our native alkaline well water cause the layers to puff open elegantly.</p></div>
-      </article>
-    </div>
+      <div class="ecom-card" onclick="navigateToProduct(1)">
+        <span class="card-emoji">🍯</span>
+        <h3 class="card-title">Gur Jaggery Batch</h3>
+        <div class="card-price">₹1,100 - ₹1,299 / kg</div>
+        <p class="card-meta">Sweetened with unrefined organic sugarcane country jaggery. Deep, smoky hue.</p>
+        <span class="btn-view">View Specifications →</span>
+      </div>
 
-    <div class="blog-banner-box">
-      <h3>The Deep Curation Articles</h3>
-      <p style="font-size: 14px; opacity: 0.9; margin-top: 6px; font-style: italic;">Read our premium guides on unique festive gifting, GI certifications, and alternative sweeteners.</p>
-      <a href="blog.html" class="btn-read-blog">Enter The Knowledge Base →</a>
-    </div>
-  </section>
+      <div class="ecom-card" onclick="navigateToProduct(2)">
+        <span class="card-emoji">✨</span>
+        <h3 class="card-title">Sada Classic Batch</h3>
+        <div class="card-price">₹500 - ₹899 / kg</div>
+        <p class="card-meta">The time-honored historical standard. Coated evenly in light white crystal syrup.</p>
+        <span class="btn-view">View Specifications →</span>
+      </div>
 
-  <div class="trust-strip">
-    <div class="trust-inner">
-      <div class="trust-item">🏅 Protected GI Tag Identity</div>
-      <div class="trust-item">🧈 Handcrafted in Pure Desi Ghee</div>
-      <div class="trust-item">🚚 Premium Transit Packaging</div>
+      <div class="ecom-card" onclick="navigateToProduct(3)">
+        <span class="card-emoji">🧂</span>
+        <h3 class="card-title">Namkeen Savory Batch</h3>
+        <div class="card-price">₹380 - ₹500 / kg</div>
+        <p class="card-meta">Entirely sugar-free configuration spiced with heirloom ajwain seeds and local rock salts.</p>
+        <span class="btn-view">View Specifications →</span>
+      </div>
     </div>
+  </main>
+</div>
+
+<!-- VIEW 2: DYNAMIC PRODUCT PAGE (PDP ARCHITECTURE) -->
+<div id="view-pdp" class="view-section">
+  <main class="section">
+    <a onclick="navigateTo('home')" style="cursor:pointer; font-size:13px; font-family:'Marcellus',serif; color:var(--gold-deep); display:inline-block; margin-bottom:1.5rem;">← Return to Collection</a>
+    
+    <div class="pdp-wrapper">
+      <div class="pdp-header-row">
+        <span class="pdp-large-emoji" id="pdp-emoji">🧈</span>
+        <div class="pdp-meta-title">
+          <h2 id="pdp-title">Desi Ghee Khaja</h2>
+          <div class="price-tag" id="pdp-price">₹1,100 – ₹1,599 / kg</div>
+        </div>
+      </div>
+
+      <div class="pdp-body">
+        <h4>The Batch Characteristics</h4>
+        <p id="pdp-long-desc">Detailed batch info text will load automatically here.</p>
+        
+        <h4>Traditional Ingredient Breakdown</h4>
+        <p id="pdp-ingredients">Ingredient notes will populate dynamically.</p>
+
+        <h4>Transit Stability Profile</h4>
+        <p>Every single batch is loaded into specialized food-grade structural inner lining trays, vacuum sealed immediately at the processing site in Nalanda, and safely padded within dual-cushioned outer boxes to protect layering alignment during pan-India transit.</p>
+      </div>
+
+      <button class="btn-pdp-whatsapp" onclick="triggerPdpWhatsApp()">
+        Initiate Custom Batch Checkout via WhatsApp
+      </button>
+    </div>
+  </main>
+</div>
+
+<!-- VIEW 3: ABOUT / HISTORICAL STORY PAGE -->
+<div id="view-about" class="view-section">
+  <main class="section">
+    <span class="sec-label">The Source</span>
+    <h2 class="sec-title">The Heritage of Silao Town</h2>
+    <div class="blog-display-card">
+      <p style="margin-bottom:1.25rem; font-size:16px; color:var(--text-mid);">Our operational workspace remains rooted in Silao, a historical locality sitting smoothly between the archaeological ruins of Rajgir and ancient Nalanda. Here, families belonging directly to the traditional Sah community collective have preserved the intricate art of hand-rolling layered wheat pastries without standard machinery modifications since 320 BCE.</p>
+      <p style="margin-bottom:1.25rem; font-size:16px; color:var(--text-mid);">True luxury is defined by environmental constraints that cannot be built synthetically elsewhere. The signature structural puffiness of real Silao Khaja depends heavily on local underground well streams carrying an anomalously high pH signature. This natural chemical balance works perfectly with local hard wheat varieties to generate the legendary flaky architecture.</p>
+    </div>
+  </main>
+</div>
+
+<!-- VIEW 4: DEEP SEO BLOG CHROMIUM PAGE -->
+<div id="view-blog" class="view-section">
+  <main class="section">
+    <span class="sec-label">The Library</span>
+    <h2 class="sec-title">The Connoisseur's Chronicle</h2>
+    
+    <div class="blog-sidebar-layout">
+      <aside class="blog-nav-strip">
+        <div class="blog-nav-chip active" id="btab-0" onclick="toggleBlogPane(0)">Festive Corporate Gifting</div>
+        <div class="blog-nav-chip" id="btab-1" onclick="toggleBlogPane(1)">GI Tag Security Mapping</div>
+        <div class="blog-nav-chip" id="btab-2" onclick="toggleBlogPane(2)">Organic Jaggery Curation</div>
+      </aside>
+
+      <div class="content-box">
+        <div class="blog-pane active" id="pane-0">
+          <h3 class="pane-title">Why Rare Traditional Sweets Elevate Corporate Festive Curation Profiles</h3>
+          <p>For operations aiming to deliver premium corporate traditional sweets for Diwali gifting, standard commercial candy options or basic chocolate gift boxes no longer showcase high regard. Modern recipients deeply value physical authenticity and historical weight.</p>
+          <p style="margin-top:1rem;">Presenting a handcrafted box of authentic Silao Khaja transcends ordinary gifting conventions. It delivers a deep, authentic narrative—52 layers rolled gracefully by experienced generational hands. Because the high-quality ghee bases preserve structural crispness easily during remote transits, it stands as a reliable corporate token.</p>
+        </div>
+
+        <div class="blog-pane" id="pane-1">
+          <h3 class="pane-title">How to Verify Legal Protections When Buying Authentic GI Products Online</h3>
+          <p>As loose naming practices complicate digital culinary selections, knowing how to safely buy GI tagged food products in India online serves as an essential protection tool. A Geographical Indication label serves as legal proof that an item derives its signature properties purely from specialized regional ground elements.</p>
+          <p style="margin-top:1rem;">Our production methods match these criteria perfectly, verified directly under official registration boundaries (Registration No. 584 17). Sourcing your batches directly from authorized guild networks safeguards family lineages and ensures your kitchen receives the real historical product.</p>
+        </div>
+
+        <div class="blog-pane" id="pane-2">
+          <h3 class="pane-title">The Metabolic Advantages of Unrefined Sugarcane Jaggery Sweets</h3>
+          <p>As progressive buyers carefully review modern ingredient choices, finding organic jaggery sweets healthy options has become central to family wellness. Replacing industrialized white sugars entirely updates how the human system processes sweetness.</p>
+          <p style="margin-top:1rem;">Refined sugars rely heavily on deep chemical processing cycles that remove all raw nutritional value. Raw country jaggery, however, holds natural iron assets, plant fibers, and essential magnesium properties. Our tailored Gur variant infuses these direct nutritional benefits straight into our layered flaky framework.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">🏅 Certified GI Protection No. 584 17</div>
+    <div class="trust-item">🧈 Hand-Rolled in Pure Desi Ghee</div>
+    <div class="trust-item">🚚 Protective Pan-India Freight Packing</div>
   </div>
-</main>
+</div>
 
 <footer>
   <span class="f-logo">Silao<span>Khaja</span></span>
-  Nalanda, Bihar, India &nbsp;·&nbsp; Preserved by the Sah Community Guild
+  Nalanda, Bihar, India &nbsp;·&nbsp; The Traditional Sah Guild Records
 </footer>
 
 <script>
-  const PHONE = '917764060959';
-  let selectedProduct = 'Desi Ghee Khaja';
-  let selectedPrice   = '₹1,100–₹1,599/kg';
+  const WHATSAPP_NUMBER = '917764060959';
 
-  function selectProduct(el, name, price, emoji, chatMsg) {
-    document.querySelectorAll('.product-card').forEach(c => c.classList.remove('selected'));
-    el.classList.add('selected');
-    selectedProduct = name; selectedPrice = price;
-    document.querySelector('#chat-bubble .chat-avatar').textContent = emoji;
-    document.getElementById('chat-text').innerHTML = chatMsg;
-    document.getElementById('wa-btn').textContent = `Order ${name} on WhatsApp`;
+  // STRUCTURED PRODUCT DATA MODEL
+  const catalog = [
+    {
+      name: "Desi Ghee Khaja (Premium Batch)",
+      price: "₹1,100 – ₹1,599 / kg",
+      emoji: "🧈",
+      desc: "Our finest regional pride. Every individual piece is deeply fried in pure clarified butter, developing a rich, comforting aroma and deep gold crust profiling. This selection holds its signature crisp crunch safely for up to 30 days when stored away from moisture exposure, making it the supreme choice for high-end gifting and festive treats.",
+      ingredients: "Hand-flattened indigenous Murariya wheat grain flour, pure organic clarified butter (Desi Ghee), regional high-alkaline groundwater fields, refined crystal simple coats."
+    },
+    {
+      name: "Gur Khaja (Traditional Jaggery Batch)",
+      price: "₹1,100 – ₹1,299 / kg",
+      emoji: "🍯",
+      desc: "An ancient execution pattern favored by purists. We entirely bypass modern white sugars, choosing instead to coat our fragile 52 sheets in rich, unrefined dark country jaggery. This creates a deeply layered, smoky molasses profile and an exquisite dark finish that honors deep traditional flavors beautifully.",
+      ingredients: "Heirloom local wheat flours, pure vegetable shortening frying lines, organic mineral-rich country sugarcane jaggery (Gur reductions), natural alkaline well water spikes."
+    },
+    {
+      name: "Sada Sweet Khaja (Timeless Classic Batch)",
+      price: "₹500 – ₹899 / kg",
+      emoji: "✨",
+      desc: "The timeless standard sweet representing the everyday legacy of Silao town. These hyper-delicate, weightless sheets are fried until airy and lightly glazed in a clean, crisp sugar syrup. It offers an exceptionally clean taste profile, capturing the iconic historical crunch loved by generations.",
+      ingredients: "Indigenous sifted wheat flour grains, clean culinary vegetable deep-frying fats, clear white simple syrup reductions, native well water elements."
+    },
+    {
+      name: "Namkeen Khaja (Sugar-Free Savory Batch)",
+      price: "₹380 - ₹500 / kg",
+      emoji: "🧂",
+      desc: "A custom preparation engineered explicitly for savory snacking preferences and health-conscious parameters. We follow the exact traditional 52-layer framework but omit sweet syrups completely. The dough is spiced evenly with selected carom seeds and local salts, serving as an ideal snack companion for diabetic tracking.",
+      ingredients: "Premium local wheat flour extractions, specialized frying fats, aromatic carom seeds (Ajwain), mineral black rock salt crystals, authentic local well water."
+    }
+  ];
+
+  let currentActiveProductId = 0;
+
+  // ROUTING ENGINE
+  function navigateTo(viewId) {
+    document.querySelectorAll('.view-section').forEach(section => section.classList.remove('active'));
+    document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+    
+    document.getElementById(`view-${viewId}`).classList.add('active');
+    const dynamicLink = document.getElementById(`lnk-${viewId}`);
+    if (dynamicLink) dynamicLink.classList.add('active');
+    
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  function switchBlog(index) {
-    document.querySelectorAll('.blog-tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.blog-article').forEach(a => a.classList.remove('active'));
-    document.querySelectorAll('.blog-tab')[index].classList.add('active');
-    document.getElementById(`blog-${index}`).classList.add('active');
+  function navigateToProduct(index) {
+    currentActiveProductId = index;
+    const item = catalog[index];
+    
+    document.getElementById('pdp-emoji').textContent = item.emoji;
+    document.getElementById('pdp-title').textContent = item.name;
+    document.getElementById('pdp-price').textContent = item.price;
+    document.getElementById('pdp-long-desc').textContent = item.desc;
+    document.getElementById('pdp-ingredients').textContent = item.ingredients;
+    
+    navigateTo('pdp');
   }
 
+  function toggleBlogPane(idx) {
+    document.querySelectorAll('.blog-nav-chip').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.blog-pane').forEach(p => p.classList.remove('active'));
+    
+    document.getElementById(`btab-${idx}`).classList.add('active');
+    document.getElementById(`pane-${idx}`).classList.add('active');
+  }
+
+  // CHECKOUT ENGINE (WHATSAPP CALLOUT CONTEXTS)
   function openGeneralWhatsApp(e) {
     e.preventDefault();
-    const msg = encodeURIComponent("Namaste! 🙏\n\nI'm browsing your online Nalanda store and would love to know more about the premium batches available for shipping. Could you assist me?");
-    window.open(`https://wa.me/${PHONE}?text=${msg}`, '_blank');
+    const txt = encodeURIComponent("Namaste! 🙏\n\nI am exploring your traditional Nalanda repository platform and would love to consult with a support representative regarding bulk gift curations and shipping schedules. Thank you.");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${txt}`, '_blank');
   }
 
-  function openWhatsApp() {
-    const msg = encodeURIComponent(`Namaste! 🙏\n\nI wish to order authentic Silao Khaja from Nalanda.\n\n• Selected Batch: ${selectedProduct}\n• Expected Price: ${selectedPrice}\n\nPlease share fresh availability and delivery details. Thank you!`);
-    window.open(`https://wa.me/${PHONE}?text=${msg}`, '_blank');
+  function triggerPdpWhatsApp() {
+    const item = catalog[currentActiveProductId];
+    const txt = encodeURIComponent(
+      `Namaste! 🙏\n\nI am reviewing your premium e-commerce catalog page and wish to order an authentic batch configuration.\n\n` +
+      `• Target Selection: ${item.name}\n` +
+      `• Listed Price Framework: ${item.price}\n\n` +
+      `Please provide clear availability confirmation, bulk volume adjustments, and expected transit delivery timelines to my location.`
+    );
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${txt}`, '_blank');
   }
 </script>
 </body>
